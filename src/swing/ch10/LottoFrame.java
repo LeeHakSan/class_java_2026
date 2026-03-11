@@ -91,6 +91,7 @@ public class LottoFrame extends JFrame implements ActionListener {
                 g.setColor(Color.BLACK);
                 g.drawOval(x, y, 80, 80);
 
+                g.setColor(Color.WHITE);
                 g.setFont(new Font("맑은 고딕", Font.BOLD, 24));
                 g.drawString(String.valueOf(num), x + 28, y + 48);
             }
@@ -102,7 +103,6 @@ public class LottoFrame extends JFrame implements ActionListener {
         if (e.getSource() == button) {
             LottoRandomNumber lottoRandomNumber = new LottoRandomNumber();
             lottoRandomNumber.makeNumber();
-            lottoRandomNumber.sortRandomNumber();
 
             lottoPanel.setNumbers(lottoRandomNumber.getNumber());
             lottoPanel.setVisible(true);
